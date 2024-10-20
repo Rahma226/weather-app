@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/cubits/get_Weather_Cubit/get_weather_states.dart';
 import 'package:weather_app/cubits/get_Weather_Cubit/get_wether_cubit.dart';
-import 'package:weather_app/views/homeView.dart';
+import 'package:weather_app/views/WeatherView.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                 primaryColor: color,
                 primarySwatch: color,
               ),
-              home: Home(),
+              home: WeatherView(),
             );
           },
         ),

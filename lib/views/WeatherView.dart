@@ -6,14 +6,14 @@ import 'package:weather_app/views/searchView.dart';
 import 'package:weather_app/widgets/NoWeather.dart';
 import 'package:weather_app/widgets/WeatherInfo.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class WeatherView extends StatefulWidget {
+  const WeatherView({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<WeatherView> createState() => _WeatherViewState();
 }
 
-class _HomeState extends State<Home> {
+class _WeatherViewState extends State<WeatherView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
