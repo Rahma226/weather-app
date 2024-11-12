@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:weather_app/cubits/get_Weather_Cubit/get_weather_states.dart';
 import 'package:weather_app/cubits/get_Weather_Cubit/get_wether_cubit.dart';
 import 'package:weather_app/views/WeatherView.dart';
 
-void main() {
+void main() async{
+   await dotenv.load();
   runApp(const MyApp());
 }
 

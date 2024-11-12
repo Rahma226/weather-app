@@ -1,17 +1,18 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:weather_app/models/weatherModel.dart';
 
 class Weatherservice {
   final String baseURL = 'https://api.weatherapi.com/v1';
-  final String apiKey = 'd73d38d250ce4bb984d114134240809';
 
   final Dio dio;
   Weatherservice( this.dio);
 
   Future<Weathermodel> getWeather({required String cityName}) async {
     try {
+      String apiKey = dotenv.env['API_KEY']!;
       Response response = await dio
           .get('$baseURL/forecast.json?key=$apiKey&q=$cityName&days=1');
 
